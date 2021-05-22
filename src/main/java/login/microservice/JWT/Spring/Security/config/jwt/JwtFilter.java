@@ -51,7 +51,6 @@ public class JwtFilter extends GenericFilterBean {
             Collection<SimpleGrantedAuthority> authorities = (Collection<SimpleGrantedAuthority>)SecurityContextHolder.getContext().getAuthentication().getAuthorities();
             if(((HttpServletResponse)servletResponse).getHeader("x-current-user")==null)
             ((HttpServletResponse)servletResponse).addHeader("x-current-user", userId.toString());
-           // ((HttpServletResponse)servletResponse).addHeader("Authorization", "Bearer " + token);
 
 
 
